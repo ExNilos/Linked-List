@@ -86,21 +86,21 @@ void LinkedList::PushBack(int a_data)
 }
 
 // Pushes an item in front of a specified node. NYF.
-void LinkedList::InsertFront(LinkedListNode & a_node, int a_data)
+/*void LinkedList::InsertFront(Iterator & a_it, int a_data)
 {
-	//// Create new node.
-	//Node* pN = new Node(a_data);
-	//// Set new node's next pointer to point at the specified node's next node;
-	//pN->_pNext = a_node._pNext;
+	// Create new node.
+	LinkedListNode* pN = new LinkedListNode(a_data);
+	// Set new node's next pointer to point at the specified node's next node;
+	pN->_pNext = a_it._pNode->_pNext;
 
 	_size++;
-}
+}*/
 
 // Pushes an item after a specified node. NYF.
-void LinkedList::InsertBack(LinkedListNode & a_node, int a_data)
+/*void LinkedList::InsertBack(Iterator & a_it, int a_data)
 {
 	_size++;
-}
+}*/
 
 // Removes the first node in the list.
 void LinkedList::PopFront()
@@ -158,7 +158,7 @@ Iterator LinkedList::First()
 // Returns a pointer to the last node in the list.
 Iterator LinkedList::End()
 {
-	return Iterator(/*_pTail*/);
+	return Iterator(_pTail);
 }
 
 // Returns the size of the list.
@@ -168,14 +168,12 @@ int LinkedList::Count()
 }
 
 // Removes a node by iterator. NYF.
-void LinkedList::Erase(Iterator& a_it)
+/*void LinkedList::Erase(Iterator& a_it)
 {
-
-
-}
+}*/
 
 // Removes all elements with the specified value. NYF.
-void LinkedList::Remove(int a_data)
+/*void LinkedList::Remove(int a_data)
 {
 	// If list is empty.
 	if (_pHead == nullptr || _pTail == nullptr)
@@ -199,4 +197,4 @@ void LinkedList::Remove(int a_data)
 			}
 		}
 	}
-}
+}*/

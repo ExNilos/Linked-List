@@ -1,5 +1,6 @@
 #include "Iterator.h"
 #include "LinkedListNode.h"
+#include <iostream>
 
 
 Iterator::Iterator()
@@ -26,10 +27,10 @@ bool Iterator::operator!=(Iterator& a_other)
 	return _pNode != a_other._pNode;
 }
 
-Iterator* Iterator::operator++()
+Iterator Iterator::operator++()
 {
-	_pNode = _pNode->_pNext;
-	return this;
+		_pNode = _pNode->_pNext;
+		return *this;
 }
 
 Iterator Iterator::operator--()

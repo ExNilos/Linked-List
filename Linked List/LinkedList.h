@@ -34,10 +34,9 @@ public:
 	// Pushes an item into the tail/end.
 	void PushBack(int a_data);
 	// Pushes an item in front of a specified node. NYF.
-	void InsertFront(LinkedListNode& a_node, int a_data);
+	//void InsertFront(Iterator& a_it, int a_data);
 	// Pushes an item after a specified node. NYF.
-    void InsertBack(LinkedListNode& a_node, int a_data);
-	
+    //void InsertBack(Iterator& a_it, int a_data);
 	// Removes the first node in the list.
 	void PopFront();
 	// Removes the last node in the list.
@@ -46,11 +45,12 @@ public:
 	Iterator First();
 	// Returns a pointer to the last node in the list.
 	Iterator End();
+	// Returns the size of the list.
 	int Count();
 	// Removes a node by iterator. NYF.
-	void Erase(Iterator& a_it);
+	//void Erase(Iterator& a_it);
 	// Removes all elements with the specified value.
-	void Remove(int a_data);
+	//void Remove(int a_data);
 
 
 };

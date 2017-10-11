@@ -13,9 +13,9 @@ void main()
 	myList.PushFront(18);
 	myList.PushBack(15);
 
-	for (auto i = myList.First(); i != myList.End(); ++i)
+	for (Iterator it(myList.First()); it._pNode != nullptr; ++it)
 	{
-		cout << *i;
+		cout << it._pNode->_data;
 	}
 	system("Pause");
 }
